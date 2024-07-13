@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.weatherapp.data.model.WeatherResponse
 import com.example.weatherapp.ui.main.WeatherState
+import com.example.weatherapp.utils.Constants.API_KEY
 
 @Composable
 fun WeatherScreen(
@@ -37,7 +38,7 @@ fun WeatherScreen(
         )
         Spacer(modifier = Modifier.height(8.dp))
         Button(
-            onClick = { fetchWeather("YOUR_API_KEY", location) },
+            onClick = { fetchWeather(API_KEY, location) },
             modifier = Modifier.fillMaxWidth()
         ) {
             Text("Get Weather")
